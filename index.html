@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Шаурма?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="invite-page">
+    <div class="invite-card">
+      <svg class="shawarma" viewBox="0 0 200 200" width="200" height="200">
+        <path class="steam steam1" d="M80 40 Q72 28 80 18 Q88 8 80 0" />
+        <path class="steam steam2" d="M100 40 Q92 28 100 18 Q108 8 100 0" />
+        <path class="steam steam3" d="M120 40 Q112 28 120 18 Q128 8 120 0" />
+
+        <path d="M58 82 L142 82 L122 182 Q100 192 78 182 Z" fill="#f1d19a" />
+        <path d="M70 140 L130 140 L122 182 Q100 192 78 182 Z" fill="#e8782f" />
+        <path d="M74 158 L126 158" stroke="#fff" stroke-width="3" />
+        <path d="M72 148 L128 148" stroke="#fff" stroke-width="3" />
+        <path d="M66 105 L134 105" stroke="#d9b16f" stroke-width="3" />
+        <path d="M64 120 L136 120" stroke="#d9b16f" stroke-width="3" />
+
+        <ellipse cx="100" cy="82" rx="42" ry="10" fill="#d9b16f" />
+        <path d="M55 82 Q58 56 74 66 Q84 44 100 62 Q116 44 126 66 Q142 56 145 82 Z" fill="#6fbf4a" />
+        <ellipse cx="100" cy="62" rx="16" ry="9" fill="#8b4a2b" />
+        <circle cx="82" cy="70" r="8" fill="#e53935" />
+        <circle cx="120" cy="68" r="7" fill="#e53935" />
+        <path d="M75 76 Q100 88 126 76" stroke="#fff" stroke-width="4" fill="none" />
+      </svg>
+
+      <h1>Пойдешь со мной кушать шаурму?</h1>
+
+      <div class="invite-buttons">
+        <button class="btn-yes" id="yesBtn">Да</button>
+        <button class="btn-no" id="noBtn">Нет</button>
+      </div>
+    </div>
+
+    <!-- Окно с вводом даты, времени и места -->
+    <div class="modal-bg hidden" id="formModal">
+      <div class="modal">
+        <h2>Отлично! 🎉</h2>
+        <p>Когда и где встретимся?</p>
+
+        <input type="date" id="dateInput" />
+        <input type="time" id="timeInput" />
+        <input type="text" id="placeInput" placeholder="Место" />
+
+        <p class="error" id="errorText"></p>
+
+        <button class="btn-yes" id="sendBtn">Отправить</button>
+      </div>
+    </div>
+
+    <!-- Окно с подтверждением -->
+    <div class="modal-bg hidden" id="doneModal">
+      <div class="modal">
+        <h2>Договорились! 🌯</h2>
+        <p id="doneDate"></p>
+        <p id="doneTime"></p>
+        <p id="donePlace"></p>
+        <button class="btn-yes" id="closeBtn">Ура!</button>
+      </div>
+    </div>
+
+    <!-- Окно "неверный ответ" -->
+    <div class="modal-bg hidden" id="wrongModal">
+      <div class="modal">
+        <h2>Неверный ответ ❌</h2>
+        <p>Попробуй еще раз 😏</p>
+        <button class="btn-yes" id="wrongBtn">Ладно</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./java.js"></script>
+</body>
+</html>

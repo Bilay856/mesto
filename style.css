@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.invite-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffb27a, #ff6f91);
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.invite-card {
+  background: #fff8f0;
+  border-radius: 32px;
+  padding: 32px 28px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.invite-card h1 {
+  font-size: 26px;
+  color: #5a2e1a;
+  margin: 10px 0 28px;
+}
+
+.shawarma {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-14px) rotate(4deg); }
+  100% { transform: translateY(0) rotate(-4deg); }
+}
+
+.steam {
+  fill: none;
+  stroke: #cfcfcf;
+  stroke-width: 4;
+  stroke-linecap: round;
+  opacity: 0;
+  animation: steam 2s ease-in-out infinite;
+}
+
+.steam2 { animation-delay: 0.4s; }
+.steam3 { animation-delay: 0.8s; }
+
+@keyframes steam {
+  0% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.invite-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 60px;
+}
+
+.btn-yes,
+.btn-no {
+  padding: 14px 36px;
+  font-size: 18px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.btn-yes {
+  background: #e8782f;
+  color: #fff;
+}
+
+.btn-yes:hover {
+  background: #d2641d;
+}
+
+.btn-no {
+  background: #e0d6cc;
+  color: #5a2e1a;
+  transition: transform 0.25s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal {
+  background: #fff8f0;
+  border-radius: 24px;
+  padding: 28px;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: pop 0.3s ease;
+}
+
+.modal h2,
+.modal p {
+  margin: 0;
+  color: #5a2e1a;
+}
+
+.modal input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e8782f;
+  border-radius: 12px;
+}
+
+.modal .error {
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
